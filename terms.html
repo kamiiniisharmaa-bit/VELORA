@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Velora · Terms of Service | Cosmic Commerce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefefe;
+            color: #111827;
+            line-height: 1.5;
+        }
+
+        :root {
+            --velora-deep: #0A1128;
+            --velora-midnight: #1A2A4F;
+            --aurora-teal: #2DD4BF;
+            --aurora-mist: #99F6E4;
+            --card-white: #ffffff;
+            --soft-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.06);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.8rem;
+        }
+
+        /* header / navbar matching main site branding */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 1.2rem 0 1rem;
+            border-bottom: 1px solid #eef2f8;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            font-size: 2rem;
+            color: var(--aurora-teal);
+            filter: drop-shadow(0 2px 5px rgba(45,212,191,0.25));
+        }
+
+        .brand-name {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(130deg, #0A1128 20%, #1E3A6F 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .brand-name span {
+            background: linear-gradient(125deg, #2DD4BF, #3B82F6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2c3e50;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--aurora-teal);
+        }
+
+        .icon-group {
+            display: flex;
+            gap: 1.3rem;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        .icon-group i {
+            transition: all 0.2s;
+            color: #334155;
+        }
+
+        .icon-group i:hover {
+            color: var(--aurora-teal);
+            transform: translateY(-2px);
+        }
+
+        /* terms hero header */
+        .terms-header {
+            background: linear-gradient(125deg, #F8FAFE 0%, #FFFFFF 100%);
+            padding: 2.8rem 0 1.8rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 0 32px 32px;
+        }
+
+        .terms-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #0A1128, #1E3A8A);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .terms-header p {
+            color: #4b5563;
+            max-width: 700px;
+            font-size: 1rem;
+        }
+
+        .last-updated {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #6c86a3;
+            display: inline-block;
+            border-left: 3px solid var(--aurora-teal);
+            padding-left: 1rem;
+        }
+
+        /* terms content card */
+        .terms-card {
+            background: var(--card-white);
+            border-radius: 36px;
+            box-shadow: var(--soft-shadow);
+            padding: 2.5rem 2.2rem;
+            margin: 2rem 0 4rem;
+            border: 1px solid #edf2f9;
+        }
+
+        .terms-section {
+            margin-bottom: 2.2rem;
+        }
+
+        .terms-section h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--velora-deep);
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .terms-section h2 i {
+            color: var(--aurora-teal);
+            font-size: 1.4rem;
+        }
+
+        .terms-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.5rem;
+            color: #1f2a48;
+        }
+
+        .terms-section p, .terms-section li {
+            color: #2d3a4b;
+            margin-bottom: 0.8rem;
+            font-size: 0.98rem;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin: 0.8rem 0 1rem 1.8rem;
+        }
+
+        .terms-section li {
+            margin-bottom: 0.4rem;
+        }
+
+        hr {
+            margin: 1.8rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, #e2e8f0, #cbd5e1, #e2e8f0);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #f1f5f9;
+            padding: 0.7rem 1.6rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--velora-deep);
+            transition: all 0.2s;
+            margin-bottom: 1rem;
+        }
+
+        .back-link i {
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            background: #e6edf4;
+            gap: 0.7rem;
+            color: var(--aurora-teal);
+        }
+
+        .footer {
+            margin-top: 3rem;
+            border-top: 1px solid #eef2f0;
+            padding: 2.2rem 0 2rem;
+            text-align: center;
+            color: #5b6e8c;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 780px) {
+            .navbar {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .terms-card {
+                padding: 1.5rem;
+            }
+            .terms-header h1 {
+                font-size: 2rem;
+            }
+            .terms-section h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- navbar identical to homepage for consistent branding -->
+    <div class="navbar">
+        <a href="#" class="logo-area" style="text-decoration: none;">
+            <i class="fas fa-moon brand-icon"></i>
+            <div class="brand-name">VELORA<span>.</span></div>
+        </a>
+        <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        </div>
+        <div class="icon-group">
+            <i class="far fa-heart"></i>
+            <i class="far fa-user"></i>
+            <i class="fas fa-bag-shopping"></i>
+        </div>
+    </div>
+
+    <!-- terms page header -->
+    <div class="terms-header">
+        <div class="back-link" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Back to Velora
+        </div>
+        <h1>Terms of Service</h1>
+        <p>Welcome to Velora — a curated cosmic marketplace. These terms govern your use of our website, products, and services.</p>
+        <div class="last-updated">Last updated: June 11, 2026</div>
+    </div>
+
+    <!-- main terms content block -->
+    <div class="terms-card">
+        <div class="terms-section">
+            <h2><i class="fas fa-globe-americas"></i> 1. General Overview</h2>
+            <p>Velora ("we", "us", "our") operates an e‑commerce platform that offers unique homeware, accessories, and cosmic-inspired goods. By accessing or using the Velora website (the "Site"), you agree to comply with and be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use our Site.</p>
+            <p>We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the Site after any changes constitutes acceptance of the revised Terms.</p>
+        </div>
+
+        <hr>
+
+        <div class="terms-section">
+            <h2><i class="fas fa-user-astronaut"></i> 2. Account Registration & Responsibility</h2>
+            <p>To access certain features (e.g., placing orders, wishlists), you may need to create a Velora account. You agree to provide accurate, current, and complete information and to maintain the security of your login credentials. You are fully responsible for all activities that occur under your account. Notify us immediately of any unauthorized use.</p>
+            <p>We reserve the right to refuse service, terminate accounts, or cancel orders at our sole discretion.</p>
+        </div>
+
+        <hr>
+
+        <div class="terms-section">
+            <h2><i class="fas fa-shopping-cart"></i> 3. Products, Pricing & Availability</h2>
+            <p>All product descriptions, imagery, and pricing are subject to change without notice. We strive to display accurate colors and details, but variations may occur due to screen settings. Velora does not warrant that product descriptions or other content are error-free.</p>
+            <p>Prices are listed in USD (or local currency where indicated) and do not include applicable taxes or shipping charges, which will be added at checkout. We reserve the right to limit quantities, cancel orders, or correct pricing errors even after an order is placed.</p>
+            <h3>Limited Editions & Drops</h3>
+            <p>Many Velora items are released as limited drops. "Sold out" items will not be restocked unless explicitly stated. In case of high demand, we process orders on a first-come, first-served basis.</p>
+        </div>
+
+        <hr>
+
+        <div class="terms-section">
+            <h2><i class="fas fa-credit-card"></i> 4. Payments & Billing</h2>
+            <p>We accept major credit cards, digital wallets, and other payment methods as displayed at checkout. By providing payment information, you represent that you are authorized to use the selected payment method. You agree to pay all charges incurred, including any applicable taxes and shipping fees.</p>
+            <p>If a payment is declined, Velora reserves the right to cancel the order. Fraudulent or unauthorized transactions will be pursued to the fullest extent of the law.</p>
+        </div>
+
+        <hr>
+
+        <div class="terms-section">
+            <h2><i class="fas fa-truck-fast"></i> 5. Shipping, Delivery & Risk of Loss</h2>
+            <p>We ship to most regions worldwide. Estimated delivery times are provided at checkout but are not guaranteed. Title and risk of loss for products pass to you upon delivery to the carrier. Velora is not liable for delays caused by customs, weather, or carrier service interruptions.</p>
+            <p>Customers are responsible for any import duties, taxes, or customs fees. For lost or damaged packages, please contact our support within 7 days of the expected delivery date.</p>
+        </div>
+
+        <hr>
+
+        <div class="terms-section">
+            <h2><i class="fas fa-undo-alt"></i> 6. Returns & Refunds</h2>
+            <p>We want you to love your Velora pieces. If you’re not completely satisfied, eligible items may be returned within 14 days of delivery for a refund or store credit. Products must be unused, in original packaging, and with all tags attached. Final sale items, perishable goods, and limited edition collaborations are non‑returnable.</p>
+            <p>To initiate a return, contact support@velora.com. Refunds are processed within 10 business days after we receive the returned product. Original shipping costs are non‑refundable unless the return is due to our error.</p>
+        </div>
+
+        <hr>
+
+        <div class="terms-section">
+            <h2><i class="fas fa-copyright"></i> 7. Intellectual Property</h2>
+            <p>All content on the Velora Site — including text, graphics, logos, product designs, icons, images, and software — is the exclusive property of Velora or its licensors and is protected by international copyright and trademark laws. You may not reproduce, distribute, modify, or create derivative works without our prior written consent.</p>
+            <p>Velora® and the celestial wave logo are registered trademarks. Any unauthorized use may result in legal action.</p>
+        </div>
+
+        <hr>
+
+        <div class="terms-section">
+            <h2><i class="fas fa-shield-alt"></i> 8. Prohibited Activities</h2>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the Site for any unlawful purpose or to solicit illegal activities.</li>
+                <li>Attempt to gain unauthorized access to any portion of the Site, servers, or databases.</li>
+                <li>Transmit any viruses, malware, or harmful code.</li>
+                <li>Scrape, crawl, or use any automated system to extract data without permission.</li>
+                <li>Impersonate another person or entity.</li>
+            </ul>
+            <p>Violation of these rules may result in immediate termination of your account and a ban from future use.</p>
+        </div>
+
+        <hr>
+
+        <div class="terms-section">
+            <h2><i class="fas fa-exclamation-triangle"></i> 9. Disclaimer of Warranties & Limitation of Liability</h2>
+            <p>Velora provides the Site and all products "as is" without any warranties, express or implied, including but not limited to implied warranties of merchantability or fitness for a particular purpose. We do not warrant that the Site will be uninterrupted, error‑free, or free of viruses.</p>
+            <p>To the maximum extent permitted by law, Velora shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Site or products, even if advised of the possibility of such damages. Our total liability shall not exceed the amount paid by you for the product in question.</p>
+            <p>Some jurisdictions do not allow certain warranty disclaimers, so these limitations may not apply to you.</p>
+        </div>
+
+        <hr>
+
+        <div class="terms-section">
+            <h2><i class="fas fa-gavel"></i> 10. Indemnification</h2>
+            <p>You agree to indemnify, defend, and hold harmless Velora and its affiliates, officers, employees, and agents from any claims, damages, losses, or expenses (including reasonable legal fees) arising from your violation of these Terms, your use of the Site, or any infringement of third‑party rights.</p>
+        </div>
+
+        <hr>
+
+        <div class="terms-section">
+            <h2><i class="fas fa-balance-scale"></i> 11. Governing Law & Dispute Resolution</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the State of California, without regard to conflict of law principles. Any dispute arising from these Terms or your use of the Site shall be resolved through binding arbitration in San Francisco, CA, unless otherwise agreed. You waive the right to participate in a class action lawsuit.</p>
+        </div>
+
+        <hr>
+
+        <div class="terms-section">
+            <h2><i class="fas fa-envelope-open-text"></i> 12. Contact Information</h2>
+            <p>If you have any questions about these Terms, please reach out:</p>
+            <p><i class="fas fa-envelope" style="color: var(--aurora-teal); margin-right: 0.5rem;"></i> legal@velora.com<br>
+            <i class="fas fa-map-pin"></i> Velora Commerce, 47 Lunar Skyway, San Francisco, CA 94103<br>
+            <i class="fas fa-headset"></i> Support: 1 (888) 764-3352 (Mon-Fri, 9AM – 5PM PT)</p>
+        </div>
+
+        <div style="margin-top: 2rem; background: #F8FAFD; border-radius: 28px; padding: 1rem 1.5rem; font-size: 0.85rem;">
+            <i class="fas fa-meteor" style="color: var(--aurora-teal); margin-right: 8px;"></i> By continuing to use Velora, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
+        </div>
+    </div>
+
+    <!-- footer with brand consistency -->
+    <div class="footer">
+        <p><i class="fas fa-moon"></i> VELORA — where every object tells a story. <br>© 2026 Velora. Infinite curation.</p>
+        <p style="margin-top: 0.8rem; gap: 1.5rem; display: flex; justify-content: center; flex-wrap: wrap;">
+            <span><i class="fas fa-ship"></i> Worldwide shipping</span>
+            <span><i class="fas fa-lock"></i> Secure checkout</span>
+            <span><i class="fas fa-leaf"></i> Sustainable ethos</span>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.75rem;"><a href="#" style="color: #5b6e8c; text-decoration: none;">Privacy Policy</a> &nbsp;|&nbsp; <a href="#" style="color: #5b6e8c; text-decoration: none;">Terms of Service</a></p>
+    </div>
+</div>
+
+<!-- simple script for back link fallback -->
+<script>
+    // enable back link to work smoothly (if no history, redirect to homepage demo)
+    const backBtn = document.querySelector('.back-link');
+    if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = "#"; // stays on same page but indicates demo
+                alert("✨ You can browse the Velora homepage to explore products — this is the standalone Terms page.");
+            }
+        });
+    }
+    // add a little hover effect for legal email
+    console.log("Velora terms page — cosmic compliance.");
+</script>
+</body>
+</html>

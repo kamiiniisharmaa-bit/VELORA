@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Velora — Cosmic Curated Commerce</title>
+    <!-- Google Fonts + simple reset & modern styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefefe;
+            color: #0b1120;
+            scroll-behavior: smooth;
+        }
+
+        /* unique color palette — deep indigo, lunar glow, aurora accents */
+        :root {
+            --velora-deep: #0A1128;
+            --velora-midnight: #1A2A4F;
+            --aurora-teal: #2DD4BF;
+            --aurora-mist: #99F6E4;
+            --lunar-dust: #F3F4F8;
+            --card-white: #ffffff;
+            --soft-shadow: 0 20px 30px -14px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
+            --hover-ease: all 0.25s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.8rem;
+        }
+
+        /* ----- header / navbar ----- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 1.2rem 0 1rem;
+            border-bottom: 1px solid #eef2f8;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            font-size: 2rem;
+            color: var(--aurora-teal);
+            filter: drop-shadow(0 2px 5px rgba(45,212,191,0.25));
+            transition: transform 0.2s;
+        }
+
+        .brand-name {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(130deg, #0A1128 20%, #1E3A6F 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .brand-name span {
+            background: linear-gradient(125deg, #2DD4BF, #3B82F6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2c3e50;
+            transition: var(--hover-ease);
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--aurora-teal);
+        }
+
+        .icon-group {
+            display: flex;
+            gap: 1.3rem;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        .icon-group i {
+            transition: var(--hover-ease);
+            color: #334155;
+        }
+
+        .icon-group i:hover {
+            color: var(--aurora-teal);
+            transform: translateY(-2px);
+        }
+
+        /* ----- hero section with unique image ----- */
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2.5rem;
+            margin: 3rem 0 4rem;
+        }
+
+        .hero-content {
+            flex: 1 1 45%;
+        }
+
+        .hero-badge {
+            background: #e0f2fe;
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            border-radius: 60px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #0c6b58;
+            letter-spacing: 0.3px;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #0A1128, #1E3A8A);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #334155;
+            max-width: 90%;
+            margin-bottom: 2rem;
+            line-height: 1.45;
+        }
+
+        .cta-button {
+            background: var(--velora-deep);
+            color: white;
+            border: none;
+            padding: 0.9rem 2rem;
+            font-weight: 600;
+            border-radius: 60px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            box-shadow: 0 6px 12px rgba(10,17,40,0.1);
+        }
+
+        .cta-button i {
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #0F1C3F;
+            transform: scale(0.97);
+        }
+
+        .cta-button:hover i {
+            transform: translateX(5px);
+        }
+
+        .hero-image {
+            flex: 1 1 45%;
+            background: linear-gradient(125deg, #f9fcff, #ffffff);
+            border-radius: 44px;
+            padding: 0.4rem;
+            box-shadow: var(--soft-shadow);
+            border: 1px solid rgba(45,212,191,0.2);
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 40px;
+            object-fit: cover;
+            display: block;
+            aspect-ratio: 4/3;
+            box-shadow: 0 12px 22px -14px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.01);
+        }
+
+        /* category strip */
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 2.5rem 0 2rem;
+        }
+
+        .cat-card {
+            background: white;
+            flex: 1;
+            min-width: 100px;
+            text-align: center;
+            padding: 1rem 0.5rem;
+            border-radius: 32px;
+            transition: all 0.2s;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            border: 1px solid #f0f2f6;
+        }
+
+        .cat-card i {
+            font-size: 1.8rem;
+            color: var(--aurora-teal);
+            margin-bottom: 0.6rem;
+            display: inline-block;
+        }
+
+        .cat-card span {
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--aurora-teal);
+            box-shadow: 0 18px 28px -14px rgba(45,212,191,0.22);
+        }
+
+        /* section style */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.5rem 0;
+            letter-spacing: -0.3px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 70px;
+            height: 3px;
+            background: var(--aurora-teal);
+            border-radius: 6px;
+        }
+
+        /* product grid with real images (high quality unsplash but using reliable placeholders with distinct product style) */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 2rem;
+            margin: 1.5rem 0 3.5rem;
+        }
+
+        .product-card {
+            background: var(--card-white);
+            border-radius: 28px;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.3s;
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0,0,0,0.03);
+            border: 1px solid #edf2f7;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 28px 36px -20px rgba(0, 0, 0, 0.18);
+            border-color: #e2edf2;
+        }
+
+        .product-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            background: #f1f5f9;
+            transition: transform 0.4s;
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.02);
+        }
+
+        .product-info {
+            padding: 1.2rem 1rem 1.4rem;
+        }
+
+        .product-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .product-price {
+            font-weight: 800;
+            color: var(--velora-deep);
+            font-size: 1.25rem;
+            margin: 0.6rem 0;
+        }
+
+        .rating {
+            color: #f5b042;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.8rem;
+        }
+
+        .add-to-cart {
+            background: transparent;
+            border: 1px solid #cbdde9;
+            padding: 0.55rem 0.9rem;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #1f2a44;
+        }
+
+        .add-to-cart i {
+            font-size: 0.8rem;
+        }
+
+        .add-to-cart:hover {
+            background: var(--aurora-teal);
+            border-color: var(--aurora-teal);
+            color: white;
+        }
+
+        /* banner / featured section extra image */
+        .feature-banner {
+            background: linear-gradient(115deg, #0A1128 0%, #162852 100%);
+            border-radius: 44px;
+            margin: 3rem 0 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 2.5rem;
+            gap: 1.8rem;
+        }
+
+        .banner-text h3 {
+            color: white;
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .banner-text p {
+            color: #b9e2e2;
+            margin-bottom: 1rem;
+            max-width: 380px;
+        }
+
+        .banner-btn {
+            background: var(--aurora-teal);
+            border: none;
+            padding: 0.7rem 1.8rem;
+            border-radius: 60px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .banner-btn:hover {
+            background: #0fbaa3;
+            transform: scale(0.96);
+        }
+
+        .banner-image img {
+            width: 160px;
+            border-radius: 28px;
+            object-fit: cover;
+            box-shadow: 0 16px 28px -10px rgba(0,0,0,0.3);
+        }
+
+        /* footer */
+        .footer {
+            margin-top: 5rem;
+            border-top: 1px solid #eef2f0;
+            padding: 2.5rem 0 2rem;
+            text-align: center;
+            color: #5b6e8c;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 780px) {
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- header: unique name branding "Velora" -->
+    <div class="navbar">
+        <div class="logo-area">
+            <i class="fas fa-moon brand-icon"></i>
+            <div class="brand-name">VELORA<span>.</span></div>
+        </div>
+        <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        </div>
+        <div class="icon-group">
+            <i class="far fa-heart"></i>
+            <i class="far fa-user"></i>
+            <i class="fas fa-bag-shopping"></i>
+        </div>
+    </div>
+
+    <!-- hero section with modern unique image (cosmic + lifestyle mix) -->
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">✦ DROP 03 · AURORA EDITION</div>
+            <h1>Where the cosmos meets <br>curated essentials</h1>
+            <p>Discover interstellar design, sustainable materials, and limited collections. Velora brings ethereal minimalism to your daily rituals.</p>
+            <button class="cta-button">Explore the universe <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="hero-image">
+            <!-- high-quality interior + celestial style image (free to use unsplash embedding) -->
+            <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format" alt="Velora cosmic interior aesthetic">
+        </div>
+    </div>
+
+    <!-- category quick links -->
+    <div class="categories">
+        <div class="cat-card"><i class="fas fa-couch"></i><span>Living</span></div>
+        <div class="cat-card"><i class="fas fa-mug-hot"></i><span>Tableware</span></div>
+        <div class="cat-card"><i class="fas fa-cloud-moon"></i><span>Aura Objects</span></div>
+        <div class="cat-card"><i class="fas fa-leaf"></i><span>Botanics</span></div>
+        <div class="cat-card"><i class="fas fa-gem"></i><span>Crystals</span></div>
+    </div>
+
+    <!-- featured products with images (unique product shots) -->
+    <div>
+        <h2 class="section-title">✨ Lunar bestsellers</h2>
+        <div class="product-grid">
+            <!-- product 1 with unique img -->
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=500&auto=format" alt="Velora ceramic vase">
+                <div class="product-info">
+                    <div class="product-title">NEBULA VASE · limited</div>
+                    <div class="rating">★★★★★</div>
+                    <div class="product-price">$89</div>
+                    <button class="add-to-cart"><i class="fas fa-plus-circle"></i> Add to Cart</button>
+                </div>
+            </div>
+            <!-- product 2 -->
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&auto=format" alt="Velora lunar sneakers">
+                <div class="product-info">
+                    <div class="product-title">ORBIT SNEAKERS</div>
+                    <div class="rating">★★★★☆</div>
+                    <div class="product-price">$129</div>
+                    <button class="add-to-cart"><i class="fas fa-plus-circle"></i> Add to Cart</button>
+                </div>
+            </div>
+            <!-- product 3 -->
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1616046229478-4f12e5e7eab5?w=500&auto=format" alt="Velora star projector">
+                <div class="product-info">
+                    <div class="product-title">STELLAR PROJECTOR</div>
+                    <div class="rating">★★★★★</div>
+                    <div class="product-price">$199</div>
+                    <button class="add-to-cart"><i class="fas fa-plus-circle"></i> Add to Cart</button>
+                </div>
+            </div>
+            <!-- product 4 with unique contemporary image -->
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&auto=format" alt="Velora crescent bag">
+                <div class="product-info">
+                    <div class="product-title">CRESCENT BAG</div>
+                    <div class="rating">★★★★☆</div>
+                    <div class="product-price">$79</div>
+                    <button class="add-to-cart"><i class="fas fa-plus-circle"></i> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- second unique product row: new arrivals with different images -->
+    <div>
+        <h2 class="section-title">🌙 New arrivals · cosmic drop</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=500&auto=format" alt="Aura incense set">
+                <div class="product-info">
+                    <div class="product-title">AURA INCENSE SET</div>
+                    <div class="rating">★★★★★</div>
+                    <div class="product-price">$44</div>
+                    <button class="add-to-cart"><i class="fas fa-plus-circle"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1606332575190-28b0d6c2a67f?w=500&auto=format" alt="Moon phase clock">
+                <div class="product-info">
+                    <div class="product-title">MOON PHASE CLOCK</div>
+                    <div class="rating">★★★★☆</div>
+                    <div class="product-price">$149</div>
+                    <button class="add-to-cart"><i class="fas fa-plus-circle"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1612336307429-8a898d10e223?w=500&auto=format" alt="Minimalist crystal set">
+                <div class="product-info">
+                    <div class="product-title">CRYSTAL TERRAIN</div>
+                    <div class="rating">★★★★★</div>
+                    <div class="product-price">$64</div>
+                    <button class="add-to-cart"><i class="fas fa-plus-circle"></i> Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img class="product-img" src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=500&auto=format" alt="Velora wool throw">
+                <div class="product-info">
+                    <div class="product-title">STARDUST THROW</div>
+                    <div class="rating">★★★★☆</div>
+                    <div class="product-price">$119</div>
+                    <button class="add-to-cart"><i class="fas fa-plus-circle"></i> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner section with extra unique branding image (limited collaboration) -->
+    <div class="feature-banner">
+        <div class="banner-text">
+            <h3>✧ Velora x Celestial Atelier ✧</h3>
+            <p>Limited edition lunar textiles & handcrafted decor. Only 250 pieces worldwide.</p>
+            <button class="banner-btn">Shop capsule →</button>
+        </div>
+        <div class="banner-image">
+            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=300&auto=format" alt="Velora exclusive collection">
+        </div>
+    </div>
+
+    <!-- footer simple branding -->
+    <div class="footer">
+        <p><i class="fas fa-meteor"></i> VELORA — where every object tells a story. <br>© 2026 Velora. Infinite curation.</p>
+        <p style="margin-top: 0.8rem; gap: 1rem; display: flex; justify-content: center; gap: 1.5rem;"><span>Shipping worldwide</span> • <span>24/7 Stellar support</span></p>
+    </div>
+</div>
+
+<!-- small interactive addition: toast-like alerts for "add to cart" demo -->
+<script>
+    // Adding simple interactive feedback for "Add to Cart" buttons to show demo functionality without backend
+    const cartButtons = document.querySelectorAll('.add-to-cart');
+    cartButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const productCard = btn.closest('.product-card');
+            let productName = 'Item';
+            if (productCard) {
+                const titleEl = productCard.querySelector('.product-title');
+                if (titleEl) productName = titleEl.innerText;
+            }
+            // mini toast style notification
+            const toast = document.createElement('div');
+            toast.innerText = `✨ ${productName} added to your cosmic cart`;
+            toast.style.position = 'fixed';
+            toast.style.bottom = '24px';
+            toast.style.left = '50%';
+            toast.style.transform = 'translateX(-50%)';
+            toast.style.backgroundColor = '#0A1128';
+            toast.style.color = '#2DD4BF';
+            toast.style.padding = '12px 24px';
+            toast.style.borderRadius = '60px';
+            toast.style.fontWeight = '600';
+            toast.style.fontSize = '0.9rem';
+            toast.style.zIndex = '999';
+            toast.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            toast.style.backdropFilter = 'blur(4px)';
+            toast.style.fontFamily = "'Inter', sans-serif";
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 400);
+            }, 2000);
+        });
+    });
+
+    // hero & banner CTA demo alerts (just for interaction)
+    const ctaBtn = document.querySelector('.cta-button');
+    if (ctaBtn) {
+        ctaBtn.addEventListener('click', () => {
+            alert('🌌 Welcome to Velora — discover our full collection. (demo experience)');
+        });
+    }
+    const bannerBtn = document.querySelector('.banner-btn');
+    if (bannerBtn) {
+        bannerBtn.addEventListener('click', () => {
+            alert('✨ Limited capsule: check back soon for exclusive pre-orders!');
+        });
+    }
+</script>
+</body>
+</html>

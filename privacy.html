@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Velora · Privacy Policy | Cosmic Commerce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fefefe;
+            color: #111827;
+            line-height: 1.5;
+        }
+
+        :root {
+            --velora-deep: #0A1128;
+            --velora-midnight: #1A2A4F;
+            --aurora-teal: #2DD4BF;
+            --aurora-mist: #99F6E4;
+            --card-white: #ffffff;
+            --soft-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.06);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.8rem;
+        }
+
+        /* header / navbar matching brand identity */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 1.2rem 0 1rem;
+            border-bottom: 1px solid #eef2f8;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            font-size: 2rem;
+            color: var(--aurora-teal);
+            filter: drop-shadow(0 2px 5px rgba(45,212,191,0.25));
+        }
+
+        .brand-name {
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(130deg, #0A1128 20%, #1E3A6F 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .brand-name span {
+            background: linear-gradient(125deg, #2DD4BF, #3B82F6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2c3e50;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--aurora-teal);
+        }
+
+        .icon-group {
+            display: flex;
+            gap: 1.3rem;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        .icon-group i {
+            transition: all 0.2s;
+            color: #334155;
+        }
+
+        .icon-group i:hover {
+            color: var(--aurora-teal);
+            transform: translateY(-2px);
+        }
+
+        /* privacy header */
+        .privacy-header {
+            background: linear-gradient(125deg, #F8FAFE 0%, #FFFFFF 100%);
+            padding: 2.8rem 0 1.8rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 0 32px 32px;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #0A1128, #1E3A8A);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .privacy-header p {
+            color: #4b5563;
+            max-width: 700px;
+            font-size: 1rem;
+        }
+
+        .last-updated {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #6c86a3;
+            display: inline-block;
+            border-left: 3px solid var(--aurora-teal);
+            padding-left: 1rem;
+        }
+
+        /* privacy card */
+        .privacy-card {
+            background: var(--card-white);
+            border-radius: 36px;
+            box-shadow: var(--soft-shadow);
+            padding: 2.5rem 2.2rem;
+            margin: 2rem 0 4rem;
+            border: 1px solid #edf2f9;
+        }
+
+        .privacy-section {
+            margin-bottom: 2.2rem;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--velora-deep);
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .privacy-section h2 i {
+            color: var(--aurora-teal);
+            font-size: 1.4rem;
+        }
+
+        .privacy-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.5rem;
+            color: #1f2a48;
+        }
+
+        .privacy-section p, .privacy-section li {
+            color: #2d3a4b;
+            margin-bottom: 0.8rem;
+            font-size: 0.98rem;
+        }
+
+        .privacy-section ul, .privacy-section ol {
+            margin: 0.8rem 0 1rem 1.8rem;
+        }
+
+        .privacy-section li {
+            margin-bottom: 0.4rem;
+        }
+
+        hr {
+            margin: 1.8rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, #e2e8f0, #cbd5e1, #e2e8f0);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #f1f5f9;
+            padding: 0.7rem 1.6rem;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--velora-deep);
+            transition: all 0.2s;
+            margin-bottom: 1rem;
+        }
+
+        .back-link i {
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            background: #e6edf4;
+            gap: 0.7rem;
+            color: var(--aurora-teal);
+        }
+
+        .highlight-badge {
+            background: #eef9ff;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-left: 0.8rem;
+            vertical-align: middle;
+            color: #0f766e;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            border-top: 1px solid #eef2f0;
+            padding: 2.2rem 0 2rem;
+            text-align: center;
+            color: #5b6e8c;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 780px) {
+            .navbar {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .privacy-card {
+                padding: 1.5rem;
+            }
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+            .privacy-section h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- navbar consistent with Velora branding -->
+    <div class="navbar">
+        <a href="#" class="logo-area" style="text-decoration: none;">
+            <i class="fas fa-moon brand-icon"></i>
+            <div class="brand-name">VELORA<span>.</span></div>
+        </a>
+        <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+        </div>
+        <div class="icon-group">
+            <i class="far fa-heart"></i>
+            <i class="far fa-user"></i>
+            <i class="fas fa-bag-shopping"></i>
+        </div>
+    </div>
+
+    <!-- privacy header area -->
+    <div class="privacy-header">
+        <div class="back-link" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Back to Velora
+        </div>
+        <h1>Privacy Policy</h1>
+        <p>Your privacy is a celestial priority. At Velora, we are committed to protecting your personal data and being transparent about how we use it.</p>
+        <div class="last-updated">Last updated: June 11, 2026</div>
+    </div>
+
+    <!-- main privacy content block -->
+    <div class="privacy-card">
+        <div class="privacy-section">
+            <h2><i class="fas fa-shield-heart"></i> 1. Introduction & Scope</h2>
+            <p>Velora ("we", "us", "our") operates the website <strong>velora.com</strong> (the "Site") and provides cosmic‑inspired goods and services. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Site, make a purchase, or interact with us. By using Velora, you agree to the collection and use of information in accordance with this policy.</p>
+            <p>If you do not agree with the terms of this Privacy Policy, please do not access the Site or provide any personal information.</p>
+        </div>
+
+        <hr>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-database"></i> 2. Information We Collect</h2>
+            <p>We collect several types of information to provide, improve, and personalize your experience:</p>
+            <h3>Personal Data You Provide</h3>
+            <ul>
+                <li><strong>Account Information:</strong> name, email address, password, profile preferences.</li>
+                <li><strong>Order & Payment Details:</strong> billing/shipping address, phone number, payment method data (handled securely via PCI‑compliant processors).</li>
+                <li><strong>Communications:</strong> messages, reviews, support requests, and feedback.</li>
+            </ul>
+            <h3>Automatically Collected Information</h3>
+            <ul>
+                <li><strong>Device & Usage Data:</strong> IP address, browser type, operating system, referring URLs, pages viewed, timestamps.</li>
+                <li><strong>Cookies & Similar Technologies:</strong> we use cookies to remember cart items, analyze site traffic, and enhance functionality. You may disable cookies via browser settings, but some features may be limited.</li>
+            </ul>
+            <h3>Information from Third Parties</h3>
+            <p>We may receive data from social media platforms (if you log in via Google/Apple) or analytics partners such as privacy‑respecting analytics tools.</p>
+        </div>
+
+        <hr>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-chart-line"></i> 3. How We Use Your Information</h2>
+            <p>Velora uses collected information for legitimate business purposes including:</p>
+            <ul>
+                <li>Processing and fulfilling orders, returns, and exchanges.</li>
+                <li>Sending order confirmations, shipping updates, and customer service messages.</li>
+                <li>Personalizing your shopping experience and recommending products.</li>
+                <li>Improving our Site, product assortment, and marketing campaigns.</li>
+                <li>Preventing fraud, security incidents, and enforcing our Terms of Service.</li>
+                <li>Sending promotional emails and newsletters (only with your consent, and you may opt out at any time).</li>
+            </ul>
+            <p>We do not sell your personal data to third parties for monetary compensation. We only share data as described in Section 4.</p>
+        </div>
+
+        <hr>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-share-alt"></i> 4. Sharing & Disclosure of Information</h2>
+            <p>We may share your information in the following limited circumstances:</p>
+            <ul>
+                <li><strong>Service Providers:</strong> payment gateways, shipping carriers, email delivery platforms, and IT support — all contractually bound to protect your data.</li>
+                <li><strong>Legal Compliance:</strong> when required by law, court order, or to protect the rights, property, or safety of Velora, our customers, or others.</li>
+                <li><strong>Business Transfers:</strong> in the event of a merger, acquisition, or sale of assets, your data may be transferred with notice posted on this Site.</li>
+                <li><strong>With Your Consent:</strong> we may ask for your permission before sharing data for other purposes.</li>
+            </ul>
+            <p>We never share sensitive financial data directly; all payment processing is encrypted via Stripe / PayPal.</p>
+        </div>
+
+        <hr>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-cookie-bite"></i> 5. Cookies & Tracking Technologies</h2>
+            <p>Our Site uses cookies and similar trackers to enhance user experience, analyze trends, and remember your preferences. You can manage your cookie preferences through your browser settings. Essential cookies cannot be disabled because they enable core functionality (e.g., shopping cart).</p>
+            <p>We also use limited analytics to understand page popularity — never to track individuals across unrelated websites. Third-party cookies from payment providers are strictly necessary.</p>
+        </div>
+
+        <hr>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-lock"></i> 6. Data Security & Retention</h2>
+            <p>Velora implements industry-standard security measures including SSL encryption, firewalls, and restricted access to personal data. However, no method of transmission over the Internet is 100% secure. We encourage you to use strong passwords and protect your account credentials.</p>
+            <p>We retain your personal information only as long as necessary to fulfill the purposes outlined in this Privacy Policy — including legal, accounting, or reporting obligations. Typically, order data is kept for 7 years for tax compliance. Marketing data is retained until you unsubscribe.</p>
+        </div>
+
+        <hr>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-user-check"></i> 7. Your Privacy Rights (GDPR / CCPA / Global)</h2>
+            <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+            <ul>
+                <li><strong>Access & Portability:</strong> request a copy of the data we hold about you.</li>
+                <li><strong>Correction:</strong> update inaccurate or incomplete information.</li>
+                <li><strong>Deletion ("Right to be Forgotten"):</strong> request erasure of your data, subject to legal limitations.</li>
+                <li><strong>Opt-Out of Marketing:</strong> click “unsubscribe” in any email or adjust account settings.</li>
+                <li><strong>Restrict Processing:</strong> object to certain types of data processing (e.g., profiling).</li>
+            </ul>
+            <p>To exercise any right, contact us at <strong>privacy@velora.com</strong>. We will respond within 30 days. We never discriminate against you for exercising your privacy rights.</p>
+            <div class="highlight-badge">GDPR compliant + CCPA ready</div>
+        </div>
+
+        <hr>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-child"></i> 8. Children's Privacy</h2>
+            <p>Velora does not knowingly collect personal information from anyone under the age of 16. If we learn that we have inadvertently collected data from a child under 16 without parental consent, we will delete it promptly. Please contact us if you believe a minor has provided us with personal information.</p>
+        </div>
+
+        <hr>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-globe"></i> 9. International Data Transfers</h2>
+            <p>Our servers and operations are based in the United States, but we ship worldwide. If you access Velora from outside the US, your data may be transferred to and processed in the US. We take steps to ensure adequate safeguards (e.g., Standard Contractual Clauses) for data transferred from the EEA/UK.</p>
+        </div>
+
+        <hr>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-bell"></i> 10. Updates to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. The "Last updated" date at the top indicates when the latest revision was made. We encourage you to review this page occasionally. Material changes will be notified via email or a prominent notice on our Site.</p>
+        </div>
+
+        <hr>
+
+        <div class="privacy-section">
+            <h2><i class="fas fa-envelope"></i> 11. Contact Us</h2>
+            <p>If you have any questions, concerns, or data requests regarding this Privacy Policy, please reach out:</p>
+            <p><i class="fas fa-envelope" style="color: var(--aurora-teal); margin-right: 0.5rem;"></i> <strong>privacy@velora.com</strong><br>
+            <i class="fas fa-map-pin"></i> Velora Legal Department, 47 Lunar Skyway, San Francisco, CA 94103, USA<br>
+            <i class="fas fa-phone-alt"></i> +1 (888) 764-3352 (Mon-Fri, 9AM–5PM PT)</p>
+        </div>
+
+        <div style="margin-top: 2rem; background: #F0FDFA; border-radius: 28px; padding: 1rem 1.5rem; font-size: 0.85rem; border-left: 4px solid var(--aurora-teal);">
+            <i class="fas fa-meteor" style="color: var(--aurora-teal); margin-right: 10px;"></i> By using Velora, you acknowledge that you have read and understood this Privacy Policy and agree to the collection and processing of your data as described.
+        </div>
+    </div>
+
+    <!-- footer with consistency -->
+    <div class="footer">
+        <p><i class="fas fa-moon"></i> VELORA — where every object tells a story. <br>© 2026 Velora. Infinite curation.</p>
+        <p style="margin-top: 0.8rem; gap: 1.5rem; display: flex; justify-content: center; flex-wrap: wrap;">
+            <span><i class="fas fa-ship"></i> Worldwide shipping</span>
+            <span><i class="fas fa-lock"></i> Secure checkout</span>
+            <span><i class="fas fa-leaf"></i> Sustainable ethos</span>
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.75rem;"><a href="#" style="color: #5b6e8c; text-decoration: none;">Privacy Policy</a> &nbsp;|&nbsp; <a href="#" style="color: #5b6e8c; text-decoration: none;">Terms of Service</a></p>
+    </div>
+</div>
+
+<script>
+    // Back link functionality — smooth return to previous page or homepage demo context
+    const backLink = document.querySelector('.back-link');
+    if (backLink) {
+        backLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = "#";
+                alert("✨ Explore the Velora universe — this is the standalone Privacy Policy page.");
+            }
+        });
+    }
+    // console greeting
+    console.log("Velora Privacy Policy — your data, respected under cosmic law.");
+</script>
+</body>
+</html>
